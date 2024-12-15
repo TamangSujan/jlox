@@ -1,0 +1,15 @@
+program                 ->  declaration* EOF;
+declaration             ->  variableDeclaration | functionDeclaration | classDeclaration | statement;
+statement               ->  expressionStatement | printStatement | blockStatement;
+variableDeclaration     ->  "var" Identifier ("=" expression);
+classDeclaration        ->  "class" Identifier ("<" Identifier")? "{" function* "}";
+ifStatement             ->  "if" "(" expression ")" statement "else" "statement";
+whileStatement          ->  "while" "(" expression ")" statement;
+forStatement            ->  "for" "(" (variableDeclaration | expressionStatement | ";") expression? ";" expression? ";" )" statement;
+blockStatement          ->  "{" declaration* "}";
+expressionStatement     ->  expression ";";
+printStatement          ->  "print" expressionStatement ";";
+variableDeclaration     ->  "var" Identifier ("=" Expression)? ";";
+functionDeclaration     ->  "function" function;
+function                ->  Identifier "(" parameter? ")" blockStatement;
+parameter               ->  Identifier ("," Identifier)*;

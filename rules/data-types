@@ -1,0 +1,21 @@
+-- Boolean --
+true
+false
+
+-- Decimal --
+1
+1.2
+
+-- String --
+"I am String"
+
+-- Null --
+null
+
+-- --
+Lox Type            Java Representation
+Any Lox Value       Object
+null                null
+Boolean             Boolean
+Number              Double
+String              String

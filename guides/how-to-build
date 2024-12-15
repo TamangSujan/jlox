@@ -1,0 +1,50 @@
+-- Scanning --
+In order to build an interpreter, the first step is scanning or lexing or lexical analysis.
+
+A scanner or lexer takes stream of characters and chunks them into words.
+In programming these words are called token.
+
+Some token are single such as (, ; and ,. Other may be several characters long such as
+123, "hi", min.
+
+Some characters in file don't mean any thing such as whitespace, comments.
+
+-- Parsing --
+The next step is parsing. This is where our syntax gets a grammar - The ability to compose
+larger expressions and statements out of smaller parts.
+
+A parser takes a flat set of tokens and builds a tree structure that mirrors the nested structure
+of grammar.
+
+Example:
+var average = (min + max) / 2
+
+var => Variable Expression
+min, max, average => Variable Statement
+(min + max) => Binary Expression
+(min + max) / 2 => Binary Expression
+2 => Literal Expression
+
+-- Static Analysis --
+The first bit of analysis in most languages is called binding or resolution.
+Even if there is a valid statement such as a + b. It must know what 'a' is and which 'a' it is.
+For each identifier, it has to find name where it is defined and wired together.
+
+Scope comes into play, where a certain name can be used for certain declaration.
+
+If a language is statically typed, this is when we check types and perform logic whether they
+support.
+
+In order to show an error, values must be set such as name, value, line number, error message.
+
+-- Code Generation --
+The last step is to convert into a form where machine can run it
+
+-- Production Rules --
+
+Expression -> Literal | Unary | Binary | Grouping
+Literal -> Number | String | "true" | "false" | null
+Unary Expressions -> ("!", "-") Expression
+Grouping Expression -> "(" Expression ")"
+Binary Expression -> Expression Operator Expression
+Operator -> "==" | "!=" | ">" | "<" | ">=" | "<=" | "+" | "-" | "*" | "/"

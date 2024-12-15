@@ -1,0 +1,32 @@
+class Shape{
+    name(){
+        return "Shaper";
+    }
+    thisMethod(){
+        print "this shape";
+    }
+    same(){
+        return this.thisMethod();
+    }
+}
+class Circle < Shape{
+    area(radius){
+        return 3.14 * radius * radius;
+    }
+    superCheck(){
+        return super.name;
+    }
+    thisMethod(){
+        print "this circle";
+    }
+    same(){
+        return this.thisMethod();
+    }
+}
+var circle = Circle();
+print circle.area(5);
+print circle.name();
+circle.superCheck();
+circle.same();
+var shape = Shape();
+shape.same();

@@ -1,0 +1,83 @@
+-- Arithmetic --
+a + b
+a - b
+a * b
+a / b
+
+Examples:
+"Hello " + "World!"
+1 + 2
+1 - 2
+3 * 2
+4 / 2
+
+-- Unary --
+-a
+
+Example:
+-5
+
+-- Comparison && Equality --
+a > b
+a < b
+a >= b
+a <= b
+a == b
+a != b
+
+Example:
+
+1 > 2 // False
+1 < 2 // True
+1 > "String" // False
+2 != 3 // True
+
+-- Logical Operators --
+!true // False
+!false // True
+
+true and false // false
+false or true // true
+
+-- Precedence and Grouping
+(a + b) / 2
+
+-- Block --
+{
+    a + b;
+    c + d;
+}
+
+-- Variables --
+var a; // a = null
+var b = 5;
+var c = "String";
+
+-- Control Flow --
+if(condition){
+    print "yes";
+}else{
+    print "No";
+}
+
+var a = 1;
+while (a < 10) {
+  print a;
+  a = a + 1;
+}
+
+for (var a = 1; a < 10; a = a + 1) {
+  print a;
+}
+
+-- Functions --
+function someName(arguments){
+    print a;
+}
+
+-- Class --
+class Breakfast{
+    cook(){
+        print "Cooking";
+    }
+}
